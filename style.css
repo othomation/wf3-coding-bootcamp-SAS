@@ -1,0 +1,331 @@
+/* ======================================== */
+/* CSS IMPORTS */
+/* ======================================== */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;1,200;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kufam&display=swap");
+/* ======================================== */
+/* RESETs - GENERAL DISPLAY - SETTINGS */
+/* ======================================== */
+* {
+	--blue: rgba(64, 136, 161, 1);
+	--red: rgba(234, 84, 85, 1);
+}
+body {
+	display: flex;
+
+	margin: 0;
+	height: 100vh;
+
+	flex-direction: column;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+/* ========================================
+ * IMAGE
+ * ======================================== */
+.image {
+	display: inline-flex;
+	overflow: hidden;
+	max-width: 100%;
+	max-height: 100%;
+	user-select: none;
+}
+.image > img {
+	display: block;
+
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* ========================================
+ * TEXT
+ * ======================================== */
+
+/* TEXT BASIS
+ * ------------------------------------------------------------------------- */
+
+.text {
+	display: block;
+
+	overflow: hidden;
+	max-width: 100%;
+	max-height: 100%;
+
+	line-height: 1.33;
+	white-space: normal;
+	word-wrap: break-word;
+	text-overflow: ellipsis;
+
+	font-family: "Montserrat", sans-serif;
+}
+
+/* SPECIFIC TEXTS
+ * ------------------------------------------------------------------------- */
+
+.text--oneline {
+	white-space: nowrap;
+}
+/* ======================================== */
+/* HEADER */
+/* ======================================== */
+.l-header {
+	position: relative;
+	box-sizing: border-box;
+
+	color: var(--red);
+	font-family: "Kufam", cursive;
+
+	/* background-color: rgb(184, 184, 192); */
+}
+
+.header-image > img {
+	height: 10em;
+	width: 100vw;
+
+	filter: grayscale(90%);
+	opacity: 0.4;
+}
+
+.header-title {
+	position: absolute;
+	bottom: 0.8em;
+	margin-left: 50vw;
+	transform: translateX(-50%);
+
+	text-decoration: underline dotted;
+	text-underline-position: under;
+	font-weight: 600;
+	font-size: 2.5rem;
+}
+
+/* ======================================== */
+/* NAV */
+/* ======================================== */
+.l-nav {
+	box-sizing: border-box;
+	/* background-color: green; */
+	font-family: "Kufam", cursive;
+}
+
+.nav-ul {
+	list-style: none;
+}
+
+.nav-ul a {
+	display: inline-block;
+
+	text-align: center;
+	padding: 0.5em 2em;
+	text-transform: uppercase;
+}
+
+.l-nav .nav-ul {
+	display: flex;
+
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+}
+
+.nav-dropdown-show {
+	position: relative;
+	display: inline-block;
+}
+
+.nav-dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: whitesmoke;
+}
+.nav-dropdown-content ul {
+	list-style: none;
+	padding: 0px;
+}
+
+.nav-dropdown-content a {
+	text-align: start;
+}
+
+li.nav-li > a,
+li.nav-li > div a,
+.nav-dropdown-content a {
+	color: var(--blue);
+	transition: 0.3s;
+}
+
+li.nav-li:hover > a,
+li.nav-li:hover > div > a {
+	background-color: var(--blue);
+	box-shadow: 0px -3px 0px blue inset;
+	color: white;
+}
+
+/* NAV STATES (HOVER - FOCUS - VISITED ?) */
+.nav-dropdown-show:hover .nav-dropdown-content {
+	display: block;
+}
+
+div.nav-dropdown-show > a:hover li.nav-dropdown-show > a {
+	color: white;
+}
+.nav-dropdown-content > ul li:hover a:hover,
+.nav-dropdown-content > ul li:focus a:focus {
+	color: white;
+	background-color: var(--blue);
+	filter: grayscale(55%);
+}
+
+/* ======================================== */
+/* MAIN-CONTENT */
+/* ======================================== */
+.l-main-section {
+	display: flex;
+	flex-grow: 1;
+}
+
+.l-left-aside,
+.l-right-aside,
+.l-main {
+	padding: 20px;
+}
+
+.l-main-section:nth-child(odd) {
+	border-top: 4px solid whitesmoke;
+	border-bottom: 4px solid whitesmoke;
+}
+.l-main {
+	box-sizing: border-box;
+	width: 60%;
+	border-left: 4px solid whitesmoke;
+	border-right: 4px solid whitesmoke;
+}
+.l-left-aside {
+	/* box-sizing: border-box; */
+	width: 20%;
+}
+
+.l-right-aside {
+	box-sizing: border-box;
+	width: 20%;
+
+	/* background-color: cyan; */
+}
+
+/* ======================================== */
+/* INSIDE l-main */
+/* ======================================== */
+.main-header {
+	text-align: center;
+	color: var(--blue);
+	font-size: 1.5rem;
+}
+.main-header.a-propos-main-header {
+	text-align: left;
+}
+.main-content {
+	text-align: justify;
+	text-justify: inter-word;
+	word-break: break-word;
+}
+
+.main-content p {
+	line-height: 1.5em;
+	color: var(--blue);
+}
+
+/* ======================================== */
+/* TABS */
+/* ======================================== */
+
+.tabs {
+	display: flex;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	width: fit-content;
+	flex-direction: column;
+	overflow: auto;
+	width: auto;
+}
+
+.tabs a {
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	word-break: break-word;
+
+	color: var(--blue);
+}
+
+.tabs a:hover,
+.tabs .active {
+	background-color: var(--blue);
+	color: white;
+}
+
+.tab-shown-content {
+	display: none;
+}
+a#tab-default {
+	display: none;
+}
+
+/* TAB CONTENT CARDS */
+
+.tab-content-card {
+	display: flex;
+	background-color: whitesmoke;
+	padding: 1em;
+	justify-content: center;
+	justify-content: unset;
+	box-sizing: border-box;
+	word-break: break-word;
+	flex-wrap: wrap;
+}
+.tab-content-card:not(:first-child) {
+	margin-top: 1em;
+}
+
+.tab-content-card:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+.tab-content-desc {
+	margin: 0.5em;
+	word-break: break-word;
+	flex: 2;
+	min-width: 40%;
+}
+
+.tab-content-card .image {
+	margin: 0.5em;
+}
+.main-header.tab-title {
+	margin-bottom: 1em;
+}
+
+.tab-content-card:nth-child(odd) .tab-content-desc-title {
+	text-align: right;
+}
+
+.tab-content-desc-title {
+	font-size: 2rem;
+}
+.tab-content-desc-text,
+.tab-content-desc-title {
+	color: var(--blue);
+}
+/* ======================================== */
+/* FOOTER */
+/* ======================================== */
+.l-footer {
+	box-sizing: border-box;
+	padding: 20px;
+	text-align: center;
+}

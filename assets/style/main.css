@@ -1,0 +1,103 @@
+/* ======================================== */
+/* CSS IMPORTS */
+/* ======================================== */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;1,200;1,300;1,400;1,500&display=swap");
+
+/* ======================================== */
+/* RESET */
+/* ======================================== */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+/* ======================================== */
+/* IMAGE
+/* ======================================== */
+.image {
+	display: inline-flex;
+	overflow: hidden;
+	max-width: 100%;
+	max-height: 100%;
+	user-select: none;
+}
+.image > img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* END COLOR HELP */
+
+/* LAYOUT */
+
+/* BANNER */
+
+.banner {
+	position: relative;
+}
+
+.banner-title {
+	position: absolute;
+	bottom: 0.8em;
+	font-size: 2.5rem;
+	margin-left: 50vw;
+	transform: translateX(-50%);
+
+	color: red;
+}
+
+.banner-image > img {
+	height: 10em;
+	width: 100vw;
+	filter: grayscale(90%);
+	opacity: 0.4;
+}
+
+/* ======================================== */
+/* NAV */
+/* ======================================== */
+.nav ul {
+	/* margin: 0px;
+	padding: 0px; */
+	list-style: none;
+}
+
+.nav a {
+	padding: 1em;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+
+.nav .menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+/* ======================================== */
+/* BODY (COLUMNS) */
+/* ======================================== */
+.body-container {
+	display: flex;
+}
+.body-container div {
+	padding: 15px;
+}
+
+.body-m-bar {
+	background-color: blueviolet;
+	width: 60%;
+}
+.body-container div:nth-child(odd) {
+	/* flex:1;   */
+	width: 20%;
+	background-color: aqua;
+}
