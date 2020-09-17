@@ -2,7 +2,7 @@
 Site web réalisé lors du coding-bootcamp du SAS d'intégration à WebForce3, 
 
 ## Formateur
-[https://www.linkedin.com/in/valentinflamand/](Valentin Flamand)
+[Valentin Flamand](https://www.linkedin.com/in/valentinflamand/)
 
 ## Dates
 
